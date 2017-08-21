@@ -1,17 +1,44 @@
 {
-  "name": "data-present-nodejs-service",
-  "version": "0.0.0",
+  "name": "data_present",
+  "version": "1.0.0",
+  "description": "数据呈现后端服务",
   "private": true,
-  "scripts": {
-    "start": "node ./bin/www"
-  },
   "dependencies": {
-    "body-parser": "~1.17.1",
-    "cookie-parser": "~1.4.3",
-    "debug": "~2.6.3",
-    "express": "~4.15.2",
-    "jade": "~1.11.0",
-    "morgan": "~1.8.1",
-    "serve-favicon": "~2.4.2"
-  }
+    "egg": "^1.7.0",
+    "egg-scripts": "^1.0.0"
+  },
+  "devDependencies": {
+    "autod": "^2.9.0",
+    "autod-egg": "^1.0.0",
+    "egg-bin": "^4.1.0",
+    "egg-ci": "^1.8.0",
+    "egg-mock": "^3.9.0",
+    "eslint": "^4.3.0",
+    "eslint-config-egg": "^5.0.0",
+    "webstorm-disable-index": "^1.2.0",
+    "verror": "^1.10.0"
+  },
+  "engines": {
+    "node": ">=6.0.0"
+  },
+  "scripts": {
+    "start": "egg-scripts start --daemon",
+    "stop": "egg-scripts stop",
+    "dev": "egg-bin dev",
+    "test": "npm run lint -- --fix && npm run test-local",
+    "test-local": "egg-bin test",
+    "cov": "egg-bin cov",
+    "lint": "eslint .",
+    "ci": "npm run lint && npm run cov",
+    "autod": "autod"
+  },
+  "ci": {
+    "version": "6, 8"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "sunxiaodong",
+  "license": "MIT"
 }
