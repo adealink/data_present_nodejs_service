@@ -11,7 +11,7 @@ module.exports = app => {
      * @returns {Promise.<*>}
      */
     async register({ argPhone, argUserName, argPassword, argVerifyCode }) {
-      if (!/^1\d{10}$/.test(phone)) {
+      if (!/^1\d{10}$/.test(argPhone)) {
         return this.ctx.error({
           name: this.ctx.ERROR_TYPE.DATA_PRESENT_ERROR.name,
           info: {

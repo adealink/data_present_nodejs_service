@@ -1,13 +1,10 @@
 logs/
 npm-debug.log
 node_modules/
-coverage/
-.idea/
 run/
+.idea/
 .DS_Store
-*.swp
 
-node_modules
 package-lock.json
 *.bak
 Thumbs.db

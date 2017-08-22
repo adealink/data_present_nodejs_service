@@ -95,9 +95,9 @@ module.exports = {
   },
 
   /**
-     * 返回成功
-     * @param {*} argData 返回数据
-     */
+  * 返回成功
+  * @param {*} argData 返回数据
+  */
   success(argData) {
     this.body = this.formatResult(this.ERR_CODE.SUCCESS, null, argData);
   },
@@ -113,11 +113,11 @@ module.exports = {
   },
 
   /**
-     * 构造json返回
-     * @param argCode
-     * @param argData
-     * @returns {{code: number, msg: string, data: {}}}
-     */
+   * 构造json返回
+   * @param argCode
+   * @param argData
+   * @returns {{code: number, msg: string, data: {}}}
+   */
   formatResult(argCode = this.ERR_CODE.FAIL, argMsg = null, argData = null) {
     let code = argCode;
     let data = argData;
