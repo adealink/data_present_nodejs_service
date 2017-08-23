@@ -19,6 +19,7 @@ module.exports = app => {
           }
         });
       }
+      return await this.ctx.models.user.getUserByPhone(argPhone);
     }
   }
   return User;
